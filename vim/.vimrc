@@ -1,39 +1,39 @@
 """"""""""""""""""""""""""""""""""""""""""""""""
 " Setup Vundler for plugin management
 """"""""""""""""""""""""""""""""""""""""""""""""
-set nocompatible
-filetype off
-
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'gmarik/Vundle.vim'
-
-" NERD tree - tree explorer
-Plugin 'scrooloose/nerdtree'
-
-" Base16 colorschemes
-Plugin 'chriskempson/base16-vim'
-
-" Ctrl-p
-Plugin 'kien/ctrlp.vim'
-
-" Elixir syntax highlighting
-Plugin 'elixir-lang/vim-elixir'
-
-" Vimwiki
-Plugin 'vimwiki/vimwiki'
-
-
-" Keep Plugin commands between vundle#begin/end.
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
+"set nocompatible
+"filetype off
+"
+"" set the runtime path to include Vundle and initialize
+"set rtp+=~/.vim/bundle/Vundle.vim
+"call vundle#begin()
+"" alternatively, pass a path where Vundle should install plugins
+""call vundle#begin('~/some/path/here')
+"
+"" let Vundle manage Vundle, required
+"Plugin 'gmarik/Vundle.vim'
+"
+"" NERD tree - tree explorer
+"Plugin 'scrooloose/nerdtree'
+"
+"" Base16 colorschemes
+"Plugin 'chriskempson/base16-vim'
+"
+"" Ctrl-p
+"Plugin 'kien/ctrlp.vim'
+"
+"" Elixir syntax highlighting
+"Plugin 'elixir-lang/vim-elixir'
+"
+"" Vimwiki
+"Plugin 'vimwiki/vimwiki'
+"
+"
+"" Keep Plugin commands between vundle#begin/end.
+"
+"" All of your Plugins must be added before the following line
+"call vundle#end()            " required
+"filetype plugin indent on    " required
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""
@@ -103,9 +103,9 @@ set encoding=utf8
 " Define standard filetype
 set ffs=unix,dos,mac
 
-let base16colorspace=256
-colorscheme base16-default-dark
-set background=dark
+"let base16colorspace=256
+"colorscheme base16_default-dark
+"set background=dark
 
 
 set cursorline	" highlight current active line
