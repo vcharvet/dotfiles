@@ -98,7 +98,7 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 # some more ls aliases
 alias ll='ls -lh'
 alias la='ls -lhA'
-alias l='ls -CF'
+alias l='ls -a'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -123,6 +123,9 @@ fi
 
 # custom aliases
 alias gs='git status'
+alias pythond='python -m ipdb'
+alias atom='atom . &'
+
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/"
@@ -132,31 +135,38 @@ BASE16_SHELL="$HOME/.config/base16-shell/"
 
 # Exporting spark home dir
 # simlink to /opt/spark for future upgrades
-export SPARK_HOME="/opt/spark"
+#export SPARK_HOME="/opt/spark"
 #export HADOOP_HOME="/opt/hadoop"
 #export HADOOP_CONF_DIR="$HADOOP_HOME/etc/hadoop"
 
-export JAVA_OPTS="-Xmx4g"
+#export JAVA_OPTS="-Xmx4g"
 
-export PATH="$SPARK_HOME"/bin:$PATH
+#export PATH="$SPARK_HOME"/bin:$PATH
 
 # Anaconda path
-ANACONDA_HOME="$HOME/anaconda3"
+#ANACONDA_HOME="$HOME/anaconda3"
 
-export PATH="$ANACONDA_HOME"/bin:$PATH
+#export PATH="$ANACONDA_HOME"/bin:$PATH
 
 
 # Default Bokeh browser
 BOKEH_BROWSER="Chromium('chromium')"   
 
 
-# Google Maps API key
-GOOGLE_MAPS_API_KEY="AIzaSyD-n_DViUNpTmYRgb2JCsC_gIHXpUMyMhQ"
 
 # CUDA PATHs
 CUDA_HOME="/usr/local/cuda/"
+export CUDA_VISIBLE_DEVICES="0"
+export CUDA_LAUNCH_BLOCKING=1
 
 export PATH="$CUDA_HOME"/bin:$PATH
+export PATH="$CUDA_HOME"/NsightCompute-2019.1:$PATH
 export LD_LIBRARY_PATH="$CUDA_HOME"lib64:$LD_LIBRARY_PATH
 
-export JAVA_HOME='/usr/lib/jvm/default-java'
+#export JAVA_HOME='/usr/lib/jvm/default-java'
+
+# Sumo home
+export SUMO_HOME="/usr/share/sumo"
+# Install Ruby Gems to ~/gems
+export GEM_HOME="$HOME/gems"
+export PATH="$HOME/gems/bin:$PATH"
