@@ -1,0 +1,14 @@
+{
+  'body': {
+    'alt-a alt-down': 'window:focus-pane-below'
+    'alt-a alt-left': 'window:focus-pane-on-left',
+    'alt-a alt-p': 'window:focus-previous-pane',
+    'alt-a alt-right': 'window:focus-pane-on-right',
+    'alt-a alt-up': 'window:focus-pane-above',
+    'alt-a alt-n': 'window:focus-next-pane'
+
+  }
+  "atom-workspace atom-text-editor": {
+    "ctrl-delete": "editor:delete-to-end-of-subword"
+  }
+}
