@@ -1,0 +1,33 @@
+"*":
+  "autocomplete-plus":
+    confirmCompletion: "tab always, enter when suggestion explicitly selected"
+  "color-indent":
+    color:
+      customColor: "#169f35"
+  core:
+    disabledPackages: [
+      "color-indent"
+      "git-diff"
+    ]
+    projectHome: "/home/valentin/workspace"
+    telemetryConsent: "limited"
+  editor:
+    fontSize: 15
+    showIndentGuide: true
+    softWrap: true
+  "exception-reporting":
+    userId: "98f502ac-eb9c-4937-a087-dd1bad85d537"
+  "git-diff-plus":
+    showIconsInEditorGutter: true
+  "ide-python":
+    pylsPlugins:
+      jedi_completion:
+        enabled: false
+    python: "/home/valentin/workspace/pythonProjects/.venvs_python36/venv-atom/bin/python"
+  todo:
+    a_pattern: "TODO+ | FIXME+"
+  welcome:
+    showOnStartup: false
+".gitignore.source":
+  editor:
+    softWrap: false
