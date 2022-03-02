@@ -1,40 +1,15 @@
 """"""""""""""""""""""""""""""""""""""""""""""""
-" Setup Vundler for plugin management
+" Setup vimplug for plugin management
 """"""""""""""""""""""""""""""""""""""""""""""""
-"set nocompatible
-"filetype off
-"
-"" set the runtime path to include Vundle and initialize
-"set rtp+=~/.vim/bundle/Vundle.vim
-"call vundle#begin()
-"" alternatively, pass a path where Vundle should install plugins
-""call vundle#begin('~/some/path/here')
-"
-"" let Vundle manage Vundle, required
-"Plugin 'gmarik/Vundle.vim'
-"
-"" NERD tree - tree explorer
-"Plugin 'scrooloose/nerdtree'
-"
-"" Base16 colorschemes
-"Plugin 'chriskempson/base16-vim'
-"
-"" Ctrl-p
-"Plugin 'kien/ctrlp.vim'
-"
-"" Elixir syntax highlighting
-"Plugin 'elixir-lang/vim-elixir'
-"
-"" Vimwiki
-"Plugin 'vimwiki/vimwiki'
-"
-"
-"" Keep Plugin commands between vundle#begin/end.
-"
-"" All of your Plugins must be added before the following line
-"call vundle#end()            " required
-"filetype plugin indent on    " required
-
+call plug#begin(stdpath("data") . '/plugged')
+  Plug 'scrooloose/nerdtree'
+  Plug 'mhinz/vim-startify'
+  Plug 'chriskempson/base16-vim'
+  Plug 'elixir-lang/vim-elixir'
+  Plug 'vimwiki/vimwiki'
+  Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+  Plug 'junegunn/fzf.vim'
+call plug#end()
 
 """""""""""""""""""""""""""""""""""""""""""""""""
 " Custom Keybindings
@@ -44,10 +19,20 @@ let mapleader=","       " leader is comma
 " turn off search highlight with ,-<space>
 nnoremap <leader><space> :nohlsearch<CR>
 
-" Invoke Ctrl-p with c-p
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
+" search file history with ,-e (fzf.vim)
+nnoremap <leader>e :History<CR>
 
+" search all files with ,-p (fzf.vim)
+nnoremap <leader>p :Files<CR>
+
+" search git commits with ,-c (fzf.vim)
+nnoremap <leader>c :Commits<CR>
+
+" search within files and code (using ripgrep) ,-f (fzf.vim)
+nnoremap <Leader>f :Rg<CR>
+
+" open/close file browser with ,-l (NERDTree)
+nnoremap <Leader>l :NERDTreeToggle<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""
 " General Configuration
@@ -58,8 +43,7 @@ set autoread
 " Height of the command bar
 set cmdheight=2
 
-set hlsearch	    " highlight search matches
-set incsearch	    " search while characters are entered
+set incsearch    " search while characters are entered
 
 " search is case-insensitive by default
 set ignorecase
@@ -75,6 +59,7 @@ set ruler	" always show current position
 set wrap	    " wrap lines only visually
 set linebreak	    " wrap only at valid characters
 set textwidth=0	    " prevent vim from inserting linebreaks
+
 set wrapmargin=0    "   in newly entered text
 
 
@@ -103,11 +88,8 @@ set encoding=utf8
 " Define standard filetype
 set ffs=unix,dos,mac
 
-"let base16colorspace=256
-"colorscheme base16_default-dark
-"set background=dark
 let base16colorspace=256
-"colorscheme base16-horizon-dark
+colorscheme base16-horizon-dark
 set background=dark
 
 
@@ -150,13 +132,6 @@ nnoremap j gj
 nnoremap k gk
 
 
-"""""""""""""""""""""""""""""""""""""""""""""""""
-" Ctrl-p
-"""""""""""""""""""""""""""""""""""""""""""""""""
-let g:ctrlp_match_window = 'bottom,order:ttb'
-let g:ctrlp_switch_buffer = 0
-let g:ctrlp_working_path_mode = 'ra'
-
 
 """""""""""""""""""""""""""""""""""""""""""""""""
 " vimwiki
@@ -171,5 +146,3 @@ let g:vimwiki_list = [{'path': '~/vimwiki/', 'auto_export': 1}]
 " show hidden files
 let NERDTreeShowHidden=1
 
-" open/close NERDTree using Leader-f (,-f)
-nnoremap <Leader>f :NERDTreeToggle<Enter>
