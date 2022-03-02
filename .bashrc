@@ -124,7 +124,7 @@ fi
 # custom aliases
 alias gs='git status'
 alias pythond='python -m ipdb'
-alias atom='atom . &'
+#alias atom='atom . &'
 
 
 # Base16 Shell
@@ -161,7 +161,7 @@ export CUDA_LAUNCH_BLOCKING=1
 
 export PATH="$CUDA_HOME"/bin:$PATH
 export PATH="$CUDA_HOME"/NsightCompute-2019.1:$PATH
-export LD_LIBRARY_PATH="$CUDA_HOME"lib64:$LD_LIBRARY_PATH
+export LD_LIBRARY_PATH="$CUDA_HOME"lib64   #:$LD_LIBRARY_PATH
 
 #export JAVA_HOME='/usr/lib/jvm/default-java'
 
@@ -170,3 +170,12 @@ export SUMO_HOME="/usr/share/sumo"
 # Install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
+
+
+# mujoco
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/valentin/.mujoco/mujoco200/bin
+
+
+
+# datasets
+export DATA_PATH="$HOME/workspace/datasets"

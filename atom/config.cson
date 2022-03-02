@@ -1,4 +1,6 @@
 "*":
+  "atom-ide-code-format":
+    formatOnSave: false
   "autocomplete-plus":
     confirmCompletion: "tab always, enter when suggestion explicitly selected"
   "color-indent":
@@ -23,7 +25,9 @@
     pylsPlugins:
       jedi_completion:
         enabled: false
-    python: "/home/valentin/workspace/pythonProjects/.venvs_python36/venv-atom/bin/python"
+    python: "/home/valentin/workspace/pythonProjects/.venvs_python37/venv-atom/bin/python"
+  "linter-ui-default":
+    panelHeight: 300
   todo:
     a_pattern: "TODO+ | FIXME+"
   welcome:
