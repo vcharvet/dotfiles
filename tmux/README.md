@@ -8,3 +8,7 @@ Install the config files according to the instructions in this repo's top level 
 ## Color Customization
 If you want to experiment with custom colors in your tmux setup, running `./tmux_colors.sh` will list you the names and the look of all colors that are available for you.
 
+
+if resurrect file not found:
+$chmod 755 .tmux
+
