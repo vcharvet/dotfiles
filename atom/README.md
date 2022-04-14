@@ -2,20 +2,22 @@
 
 keymap.cson should be placed into atom config directory
 $ ln -s keymap.cson ~/.atom/ 
+$ ln -s config.cson ~/.atom
 
-Same for config.cson
+
+In `config.cson` change python path to the correct local interpreter
 
 
 
 ## Packages
-atom-ide-ui
-atom-unsaved-changes
-color-indent
-git-diff-plus
-ide-python
-jekyll-syntax-highlighting
-language-gitignore
-todo
+* atom-ide-ui
+* atom-unsaved-changes
+* color-indent
+* git-diff-plus
+* ide-python
+* jekyll-syntax-highlighting
+* language-gitignore
+* todo
 =======
 # Atom
 
