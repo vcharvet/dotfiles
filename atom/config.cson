@@ -7,29 +7,74 @@
     color:
       customColor: "#169f35"
   core:
+    autoHideMenuBar: true
     disabledPackages: [
       "color-indent"
-      "git-diff"
+      "ide-python"
     ]
     projectHome: "/home/valentin/workspace"
     telemetryConsent: "limited"
   editor:
-    fontSize: 15
+    fontSize: 16
     showIndentGuide: true
     softWrap: true
   "exception-reporting":
     userId: "98f502ac-eb9c-4937-a087-dd1bad85d537"
   "git-diff-plus":
     showIconsInEditorGutter: true
+  "grammar-check":
+    excludedScopes: [
+      "meta.reference.latex"
+      "string.other.math.tex"
+      "variable.parameter.*"
+      "keyword.*"
+      "support.*"
+      "meta.function.environment.*"
+      "punctuation.*"
+      "markup.raw.verbatim.latex"
+      ".*comment*"
+    ]
+    includedScopes: [
+      "text.tex.latex"
+      "tex.tex"
+    ]
+    language: "en-GB"
+    languageToolStartServerCommand: "java -cp ~/workspace/LanguageTool-6.3/languagetool-server.jar org.languagetool.server.HTTPServer --port 8081"
+    languageToolStopServerCommand: "java -cp ~/workspace/LanguageTool-6.3/languagetool-server.jar org.languagetool.server.HTTPServer --port 8081"
+    usedCorrecter: "languagetool"
   "ide-python":
     pylsPlugins:
+      flake8:
+        enabled: true
       jedi_completion:
         enabled: false
+      pylint:
+        enabled: true
     python: "/home/valentin/workspace/pythonProjects/.venvs_python37/venv-atom/bin/python"
   "linter-ui-default":
     panelHeight: 300
+  "pulsar-ide-python":
+    pylsPlugins:
+      flake8:
+        enabled: true
+      pydocstyle: {}
+      pylint: {}
+      pyls_mypy:
+        enabled: false
+    python: "/home/valentin/workspace/pythonProjects/.venvs_python37/venv-atom/bin/python"
+  "spell-check":
+    grammars: [
+      "source.asciidoc"
+      "source.gfm"
+      "text.git-commit"
+      "text.plain"
+      "text.plain.null-grammar"
+      "source.rst"
+      "text.restructuredtext"
+      "text.tex.latex"
+    ]
   todo:
-    a_pattern: "TODO+ | FIXME+"
+    a_pattern: "TODO+|FIXME+"
   welcome:
     showOnStartup: false
 ".gitignore.source":

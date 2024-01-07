@@ -173,7 +173,8 @@ export PATH="$HOME/gems/bin:$PATH"
 
 
 # mujoco
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/valentin/.mujoco/mujoco200/bin
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/valentin/.mujoco/mujoco210/bin
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/valentin/.mujoco/mujoco200/bin
 
 
 
