@@ -1,7 +1,42 @@
-// Place your key bindings in this file to override the defaultsauto[]
+// Place your key bindings in this file to override the defaults
 [
     {
-        "key": "ctrl+j",
-        "command": "editor.action.joinLines"
+        "key": "ctrl+t ctrl+t",
+        "command": "workbench.view.extension.todo-tree-container",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+a down",
+        "command": "workbench.action.focusBelowGroup",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+a left",
+        "command": "workbench.action.focusLeftGroup",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+a alt+p",
+        "command": "workbench.action.focusPreviousGroup",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+a right",
+        "command": "workbench.action.focusRightGroup",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+a up",
+        "command": "workbench.action.focusAboveGroup",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+a alt+n",
+        "command": "workbench.action.focusNextGroup",
+        "when": "editorFocus"
+    },
+    {
+        "key": "alt+a a",
+       "command": "workbench.action.focusSideBar"
     }
 ]
