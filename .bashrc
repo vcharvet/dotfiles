@@ -67,7 +67,7 @@ fi
 unset color_prompt force_color_prompt
 
 #custom color prompt
-PS1='\[\033[1;33m\]\u\[\033[1;94m\]@\[\033[1;92m\]\h\[\033[1;94m\]:\[\033[1;95m\]\W\[\033[1;94m\]\$\[\033[0;31m\] ' # change to \w to get full path 
+PS1='\[\033[1;33m\]\u\[\033[1;94m\]@\[\033[1;92m\]\h\[\033[1;94m\]:\[\033[1;95m\]\W\[\033[1;94m\]\$\[\033[1;37m\] ' # change to \w to get full path 
 
 #export PS1="\[\e[32m\][\[\e[m\]\[\e[31m\]\u\[\e[m\]\[\e[33m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\]:\[\e[36m\]\w\[\e[m\]\[\e[32m\]]\[\e[m\]\[\e[32;47m\]\\$"
 
@@ -131,7 +131,8 @@ alias pythond='python -m ipdb'
 BASE16_SHELL="$HOME/.config/base16-shell/"
 [ -n "$PS1" ] && \
 	    [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-	            eval "$("$BASE16_SHELL/profile_helper.sh")"
+	            source  "$BASE16_SHELL/profile_helper.sh"
+base16_google-dark  # base16_material-palenight for ssh
 
 # Exporting spark home dir
 # simlink to /opt/spark for future upgrades
@@ -166,7 +167,8 @@ export LD_LIBRARY_PATH="$CUDA_HOME"lib64   #:$LD_LIBRARY_PATH
 #export JAVA_HOME='/usr/lib/jvm/default-java'
 
 # Sumo home
-export SUMO_HOME="/usr/share/sumo"
+export SUMO_HOME="/opt/sumo" # "/usr/share/sumo"
+export PATH="$SUMO_HOME/bin:$PATH"
 # Install Ruby Gems to ~/gems
 export GEM_HOME="$HOME/gems"
 export PATH="$HOME/gems/bin:$PATH"
@@ -180,3 +182,4 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/valentin/.mujoco/mujoco210/bin
 
 # datasets
 export DATA_PATH="$HOME/workspace/datasets"
+export PATH=$PATH:/home/val-ubuntu/bin
