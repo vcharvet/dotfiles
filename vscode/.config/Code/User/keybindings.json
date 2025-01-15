@@ -16,6 +16,11 @@
         "when": "editorFocus"
     },
     {
+        "key": "alt+a left",
+        "command": "workbench.action.focusLeftGroup",
+        "when": "notebookEditorFocused"
+    },
+    {
         "key": "alt+a alt+p",
         "command": "workbench.action.focusPreviousGroup",
         "when": "editorFocus"
@@ -24,6 +29,11 @@
         "key": "alt+a right",
         "command": "workbench.action.focusRightGroup",
         "when": "editorFocus"
+    },
+    {
+        "key": "alt+a right",
+        "command": "workbench.action.focusRightGroup",
+        "when": "notebookEditorFocused"
     },
     {
         "key": "alt+a up",
@@ -38,5 +48,20 @@
     {
         "key": "alt+a a",
        "command": "workbench.action.focusSideBar"
+    },
+    {
+        "key": "shift+tab",
+        "command": "editor.action.inlineSuggest.commit",
+        "when": "inlineEditIsVisible && tabShouldAcceptInlineEdit && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineEditIsVisible && inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineEditIsVisible && inlineSuggestionVisible && tabShouldAcceptInlineEdit && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible"
+    },
+    {
+        "key": "tab",
+        "command": "editor.action.inlineSuggest.acceptNextLine", // or acceptNextWord
+        "when": "inlineSuggestionVisible && !editorReadonly"
+    },
+    {
+        "key": "tab",
+        "command": "-editor.action.inlineSuggest.commit",
+        "when": "inlineEditIsVisible && tabShouldAcceptInlineEdit && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineEditIsVisible && inlineSuggestionHasIndentationLessThanTabSize && inlineSuggestionVisible && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible || inlineEditIsVisible && inlineSuggestionVisible && tabShouldAcceptInlineEdit && !editorHoverFocused && !editorTabMovesFocus && !suggestWidgetVisible"
     }
 ]

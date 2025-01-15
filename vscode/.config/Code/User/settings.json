@@ -1,12 +1,58 @@
 {
-    "window.menuBarVisibility": "toggle",
-    "workbench.colorTheme": "Horizon",
-    "python.pythonPath": "/usr/bin/python3",
-    "editor.renderControlCharacters": true,
-    "telemetry.enableTelemetry": false,
-    "telemetry.enableCrashReporter": false,
-    "editor.fontLigatures": true,
-    "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'monospace', monospace, 'Droid Sans Fallback'",
-    "editor.fontSize": 16,
-    "files.autoSave": "onFocusChange"
+    "remote.SSH.configFile": "C:\\Users\\ValentinCHARVET\\.ssh\\config",
+    "remote.SSH.defaultForwardedPorts": [],
+    "remote.SSH.defaultExtensions": [
+        "vmprep"
+    ],
+    "security.allowedUNCHosts": [
+        "wsl$",
+        "wsl.localhost"
+    ],
+    "remote.SSH.remotePlatform": {
+        "vmprep": "linux",
+        "greivous": "linux"
+    },
+    "editor.wordWrap": "on",
+    "editor.minimap.enabled": false,
+    "notebook.lineNumbers": "on",
+    "search.exclude": {
+        "env": true,
+        "venv/": true
+    },
+    "python.defaultInterpreterPath": "~/workspace//venvs3.9/venv-sumo/bin/python",
+    "remote.autoForwardPortsSource": "hybrid",
+    "todo-tree.general.tags": [
+        "BUG",
+        "HACK",
+        "FIXME",
+        "TODO",
+        "DEPRECATED",
+        "DEBUG",
+        "[x]",
+        "XXX",
+        "[]"
+    ],
+    "todo-tree.highlights.useColourScheme": true,
+    "todo-tree.highlights.backgroundColourScheme": [
+        "violet",
+        "cyan",
+        "orange",
+        "yellow",
+        "pink",
+        "green"
+    ],
+    "todo-tree.highlights.foregroundColourScheme": [
+        "white",
+        "black",
+        "black",
+        "black",
+        "white",
+        "white",
+        "black"
+    ],
+    "todo-tree.general.tagGroups": {},
+    "git.autofetch": true,
+    "workbench.editorLargeFileConfirmation": 50,
+    "workbench.colorTheme": "Default Dark+",
+    "window.autoDetectColorScheme": true
 }
