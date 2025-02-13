@@ -1,15 +1,23 @@
 // Place your key bindings in this file to override the defaults
 [
+    // open TODO tree
     {
         "key": "ctrl+t ctrl+t",
         "command": "workbench.view.extension.todo-tree-container",
         "when": "editorFocus"
     },
+    // {
+    //     "key": "alt+a down",
+    //     "command": "workbench.action.focusBelowGroup",
+    //     "when": "editorFocus"
+    // },
+    // toggle bottom panel
     {
         "key": "alt+a down",
-        "command": "workbench.action.focusBelowGroup",
-        "when": "editorFocus"
+        "command": "workbench.action.togglePanel",
+        "when": "true"
     },
+    // move between editor windows
     {
         "key": "alt+a left",
         "command": "workbench.action.focusLeftGroup",
@@ -45,10 +53,12 @@
         "command": "workbench.action.focusNextGroup",
         "when": "editorFocus"
     },
+    // open side-bar (left) and allow use cursor
     {
         "key": "alt+a a",
-       "command": "workbench.action.focusSideBar"
+       "command": "workbench.action.focusSideBar",
     },
+    // custom autocomplete: tab is next word, shift+tab is next line
     {
         "key": "shift+tab",
         "command": "editor.action.inlineSuggest.acceptNextLine",
