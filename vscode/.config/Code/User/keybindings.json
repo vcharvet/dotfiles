@@ -35,6 +35,11 @@
         "when": "notebookEditorFocused"
     },
     {
+        "key": "alt+a left",   // FIXME: not working
+        "command": "workbench.action.focusSideBar",
+        "when": "editorTextFocus && (activeEditorGroupIndex == 0)"
+    },
+    {
         "key": "alt+a alt+p",
         "command": "workbench.action.focusPreviousGroup",
         "when": "editorFocus"
@@ -48,6 +53,11 @@
         "key": "alt+a right",
         "command": "workbench.action.focusRightGroup",
         "when": "notebookEditorFocused"
+    },
+    {
+        "key": "alt+a right",
+        "command": "workbench.action.focusActiveEditorGroup",
+        "when": "sideBarFocus"
     },
     // {
     //     "key": "alt+a up/",
@@ -63,6 +73,12 @@
     {
         "key": "alt+a a",
        "command": "workbench.action.focusSideBar",
+    },
+    // evaluate expression in debug console
+    {
+        "key": "ctrl+e",
+        "command": "editor.debug.action.selectionToRepl",
+        "when": "editorTextFocus && inDebugMode" //!editorReadonly && !inDebugRepl"
     },
     // custom autocomplete: tab is next word, shift+tab is next line
     {

@@ -54,5 +54,9 @@
     "git.autofetch": true,
     "workbench.editorLargeFileConfirmation": 50,
     "workbench.colorTheme": "Default Dark+",
-    "window.autoDetectColorScheme": true
+    "window.autoDetectColorScheme": true,
+    "workbench.startupEditor": "none",
+    "debug.openDebug": "neverOpen",
+    "chat.commandCenter.enabled": false,
+    "jupyter.disableJupyterAutoStart": true
 }
