@@ -1,0 +1,75 @@
+// Zed settings
+//
+// For information on how to configure Zed, see the Zed
+// documentation: https://zed.dev/docs/configuring-zed
+//
+// To see all of Zed's default settings without changing your
+// custom settings, run `zed: open default settings` from the
+// command palette (cmd-shift-p / ctrl-shift-p)
+{
+  "edit_predictions": {
+    "mode": "subtle"
+  },
+  "agent": {
+    "default_model": {
+      "provider": "mistral",
+      "model": "codestral-latest"
+    },
+    "model_parameters": []
+  },
+  "git": {
+    "inline_blame": {
+      "enabled": false
+    }
+  },
+  "base_keymap": "VSCode",
+  "features": {
+    "edit_prediction_provider": "zed" // can we change this?
+  },
+  "minimap": {
+    "show": "never"
+  },
+  "soft_wrap": "bounded",
+  "preferred_line_length": 80,
+  "ui_font_size": 16,
+  "buffer_font_size": 15,
+  "theme": {
+    "mode": "system",
+    "light": "Ayu Light",
+    "dark": "Ayu Dark"
+  },
+  "languages": {
+    "Python": {
+      "language_servers": ["pyright", "ruff"],
+      "format_on_save": "on",
+      "formatter": [
+        {
+          "code_actions": {
+            "source.organizeImports.ruff": true,
+            "source.fixAll.ruff": true
+          }
+        },
+        {
+          "language_server": { "name": "ruff" }
+        }
+      ]
+    }
+  },
+
+  "language_models": {
+    "mistral": {
+      "api_url": "https://api.mistral.ai/v1",
+      "available_models": [
+        {
+          "name": "codestral-latest",
+          "display_name": "Codestral",
+          "max_tokens": 32000,
+          "max_output_tokens": 4096,
+          "max_completion_tokens": 1024,
+          "supports_tools": true,
+          "supports_images": false
+        }
+      ]
+    }
+  }
+}
