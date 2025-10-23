@@ -7,13 +7,18 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "relative_line_numbers": false,
+  "gutter": {
+    "line_numbers": true
+  },
   "edit_predictions": {
     "mode": "subtle"
   },
   "agent": {
+    "dock": "right",
     "default_model": {
       "provider": "mistral",
-      "model": "codestral-latest"
+      "model": "devstral-medium-latest"
     },
     "model_parameters": []
   },
@@ -30,32 +35,27 @@
     "show": "never"
   },
   "soft_wrap": "bounded",
-  "preferred_line_length": 80,
+  "preferred_line_length": 88,
   "ui_font_size": 16,
   "buffer_font_size": 15,
   "theme": {
     "mode": "system",
     "light": "Ayu Light",
-    "dark": "Ayu Dark"
+    "dark": "New Theme"
   },
   "languages": {
     "Python": {
       "language_servers": ["pyright", "ruff"],
       "format_on_save": "on",
       "formatter": [
-        {
-          "code_actions": {
-            "source.organizeImports.ruff": true,
-            "source.fixAll.ruff": true
-          }
-        },
+        { "code_action": "source.organizeImports.ruff" },
+        { "code_action": "source.fixAll.ruff" },
         {
           "language_server": { "name": "ruff" }
         }
       ]
     }
   },
-
   "language_models": {
     "mistral": {
       "api_url": "https://api.mistral.ai/v1",

@@ -7,9 +7,11 @@
 // from the command palette.
 [
   {
-    "context": "Workspace",
+    // "context": "Workspace",
+    "use_key_equivalents": true,
     "bindings": {
       // "shift shift": "file_finder::Toggle"
+      "alt-a up": "workspace::ToggleZoom"
     }
   },
   {
@@ -24,5 +26,45 @@
       "shift-tab": "editor::AcceptEditPrediction",
       "ctrl-cmd-right": "editor::AcceptPartialEditPrediction"
     }
+  },
+  {
+    "context": "Editor",
+    "use_key_equivalents": true,
+    "bindings": {
+      // following are default values
+      "cmd-backspace": "editor::DeleteToBeginningOfLine",
+      "cmd-delete": "editor::DeleteToEndOfLine", // use ctrl+K instaed (default)
+      "alt-backspace": [
+        "editor::DeleteToPreviousWordStart",
+        { "ignore_newlines": false, "ignore_brackets": false }
+      ],
+      "alt-cmd-[": "editor::Fold",
+      "alt-cmd-]": "editor::UnfoldLines",
+      "cmd-k cmd-l": "editor::ToggleFold",
+      "cmd-shift-k": "editor::DeleteLine",
+      "cmd-g": "go_to_line::Toggle"
+    }
+  },
+  {
+    "context": "Pane", // maybe can be put in edit context
+    "bindings": {
+      "alt-a left": "workspace::ActivatePaneLeft",
+      "alt-a right": "workspace::ActivatePaneRight"
+    }
+  },
+  {
+    "context": "ProjectPanel && not_editing",
+    "use_key_equivalents": true,
+    "bindings": {
+      "a": "project_panel::NewFile",
+      "shift-a": "project_panel::NewDirectory",
+      "shift-d": "project_panel::Duplicate",
+      "enter": "project_panel::Open"
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "use_key_equivalents": true,
+    "bindings": {}
   }
 ]
