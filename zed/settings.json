@@ -7,12 +7,25 @@
 // custom settings, run `zed: open default settings` from the
 // command palette (cmd-shift-p / ctrl-shift-p)
 {
+  "lsp_document_colors": "inlay",
+  "inlay_hints": {
+    "show_value_hints": false,
+    "enabled": false
+  },
   "relative_line_numbers": false,
   "gutter": {
     "line_numbers": true
   },
   "edit_predictions": {
-    "mode": "subtle"
+    "mode": "subtle",
+    "codestral": {
+      "api_url": "https://codestral.mistral.ai",
+      "model": "codestral-latest",
+      "max_tokens": 300
+    }
+  },
+  "features": {
+    "edit_prediction_provider": "codestral" // can we change this?
   },
   "agent": {
     "dock": "right",
@@ -28,9 +41,6 @@
     }
   },
   "base_keymap": "VSCode",
-  "features": {
-    "edit_prediction_provider": "zed" // can we change this?
-  },
   "minimap": {
     "show": "never"
   },
@@ -45,8 +55,8 @@
   },
   "languages": {
     "Python": {
-      "language_servers": ["pyright", "ruff"],
-      "format_on_save": "on",
+      "language_servers": ["ruff", "pyright"], // or "basedpyright", "!pyright"
+      "format_on_save": "off", // shortcut to format: cmd+shift+i
       "formatter": [
         { "code_action": "source.organizeImports.ruff" },
         { "code_action": "source.fixAll.ruff" },

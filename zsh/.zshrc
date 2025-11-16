@@ -61,19 +61,22 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 #------------------------------------------------------
 # Aliases
 #------------------------------------------------------
-alias serve='python -m http.server'
-alias de='setxkbmap de'
-alias us='setxkbmap us'
+#alias serve='python -m http.server'
+#alias de='setxkbmap de'
+#alias us='setxkbmap us'
+alias gs='git status'
+alias la='ls -la'
+
 
 whatsonport() {
     lsof -i tcp:$1
 }
 
-gpg_restart() {
-    sudo killall gpg-agent
-    gpg-agent --daemon  ~/.gpg-agent-info --enable-ssh-support
-    source ~/.gpg-agent-info
-}
+#gpg_restart() {
+#    sudo killall gpg-agent
+#    gpg-agent --daemon  ~/.gpg-agent-info --enable-ssh-support
+#    source ~/.gpg-agent-info
+#}
 
 # load OS specific config
 case `uname` in

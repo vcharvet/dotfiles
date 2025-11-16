@@ -33,15 +33,15 @@
     "bindings": {
       // following are default values
       "cmd-backspace": "editor::DeleteToBeginningOfLine",
-      "cmd-delete": "editor::DeleteToEndOfLine", // use ctrl+K instaed (default)
+      "cmd-k": "editor::DeleteToEndOfLine", // use ctrl+K instaed (default)
       "alt-backspace": [
         "editor::DeleteToPreviousWordStart",
         { "ignore_newlines": false, "ignore_brackets": false }
       ],
       "alt-cmd-[": "editor::Fold",
       "alt-cmd-]": "editor::UnfoldLines",
-      "cmd-k cmd-l": "editor::ToggleFold",
-      "cmd-shift-k": "editor::DeleteLine",
+      // "cmd-k cmd-l": "editor::ToggleFold",
+      "cmd-shift-l": "editor::DeleteLine",
       "cmd-g": "go_to_line::Toggle"
     }
   },
